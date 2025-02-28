@@ -1,7 +1,24 @@
 # **Academic Directory System**
 
+![Login Interface](ADS%20Interface.png)
+
+
 ## **1. Introduction**
 The **Academic Directory System** is a student management application that allows administrators to manage student records, announcements, and feedback. It utilizes **DSA Concepts** like an **AVL tree** for student record management, a **queue** for feedback handling, and a **stack** for announcements. The system is built in **C++** and provides a console-based interface.
+
+### **Admin Menu:**
+
+<p align="center">
+  <img src="Admin%20Menu.png" alt="Admin Menu" width="500">
+</p>
+
+---
+
+### **Student Menu:**
+
+<p align="center">
+  <img src="Student%20Menu.png" alt="Student Menu" width="500">
+</p>
 
 ## **2. Features**
 - **Login System:** Separate login credentials for admin and students.
