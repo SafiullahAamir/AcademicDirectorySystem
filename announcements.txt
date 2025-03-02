@@ -2,3 +2,5 @@ chutti
 5 feb ko chutti h
 Result
 result has been uploaded on portal
+DS Grade
+The Data Structure grade has been uploaded

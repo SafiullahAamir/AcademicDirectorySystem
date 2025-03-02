@@ -367,7 +367,6 @@ public:
         setTextColor(7);
         cout << "\t" << "Student Name          : ";
         getline(cin, name);
-
         cout << "\t" << "Student Mail          : " << mail << endl;
         cout << "\t" << "Student Mail Password : ";
         getline(cin, pass_word);
@@ -375,12 +374,15 @@ public:
         cout << "\t" << "Student Semester      : " << sem << endl;
         cout << "\t" << "Student Father's Name : ";
         getline(cin, father_name);
- 
         cout << "\t" << "Student Scholarship   : ";
         cin >> scolarship;
-
+        while(scolarship%5!=0)
+        {
+            cout << "\t" << "Student Scholarship (%5==0)  : ";
+            cin >> scolarship;
+        }
         add_program(prg_n, crdt_hrs, fee);
-        cin.ignore(100, '\n');
+        
         add_node(rollNo, mail, pass_word, father_name, name, scolarship, prg_n, fee, crdt_hrs, sem, root);
     }
 
@@ -525,7 +527,13 @@ public:
                 getline(cin, temp->fthr_name);
                 cout << setw(23) << setfill(' ') << "Student Scholarship   : ";
                 cin >> temp->Scholarship;
+                while(scolarship%5!=0)
+                {
+                    cout << "\t" << "Student Scholarship (%5==0)  : ";
+                    cin >> temp->Scholarship;
+                }
                 add_program(temp->Program, temp->Credit_h, temp->Fees);
+                cin.ignore(100, '\n');
             }
             else if (choice == 2)
             {
@@ -557,6 +565,11 @@ public:
                 {
                     cout << setw(23) << setfill(' ') << "Student Scholarship: ";
                     cin >> temp->Scholarship;
+                    while(scolarship%5!=0)
+                    {
+                        cout << "\t" << "Student Scholarship (%5==0)  : ";
+                        cin >> temp->Scholarship;
+                    }
                 }
                 else if (c == 5)
                 {
@@ -781,6 +794,7 @@ public:
             cout << "Enter the content of the announcement: " << endl;
             getline(cin, content);
             push(title, content);
+            //cin.ignore(100, '\n');
             break;
             goto label;
         }
@@ -1012,9 +1026,11 @@ public:
             {
             case 1:
                 Add_std_detail();
+                cin.ignore(100, '\n');
                 break;
             case 2:
                 delete_student();
+                cin.ignore(100, '\n');
                 break;
             case 3:
                 update();
