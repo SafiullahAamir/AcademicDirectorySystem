@@ -378,7 +378,7 @@ public:
         cin >> scolarship;
         while(scolarship%5!=0)
         {
-            cout << "\t" << "Student Scholarship   : ";
+            cout << "\t" << "Student Scholarship (%5==0)  : ";
             cin >> scolarship;
         }
         add_program(prg_n, crdt_hrs, fee);
@@ -527,6 +527,11 @@ public:
                 getline(cin, temp->fthr_name);
                 cout << setw(23) << setfill(' ') << "Student Scholarship   : ";
                 cin >> temp->Scholarship;
+                while(scolarship%5!=0)
+                {
+                    cout << "\t" << "Student Scholarship (%5==0)  : ";
+                    cin >> temp->Scholarship;
+                }
                 add_program(temp->Program, temp->Credit_h, temp->Fees);
                 cin.ignore(100, '\n');
             }
@@ -560,6 +565,11 @@ public:
                 {
                     cout << setw(23) << setfill(' ') << "Student Scholarship: ";
                     cin >> temp->Scholarship;
+                    while(scolarship%5!=0)
+                    {
+                        cout << "\t" << "Student Scholarship (%5==0)  : ";
+                        cin >> temp->Scholarship;
+                    }
                 }
                 else if (c == 5)
                 {
